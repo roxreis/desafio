@@ -65,6 +65,11 @@ php artisan cache:clear
 php artisan db:seed UsersSeeder
 php artisan db:seed ShopkeepersSeeder
 ```
+## Guzzle
+```
+composer require guzzlehttp/guzzle
+```
+
 ### Wallets Table
 
 Manually populate the Wallets table with uuid user and shopkeeper
