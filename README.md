@@ -1,16 +1,10 @@
-# Docker + Lumen with Nginx, MySQL, and Memcached
-
-![image](Lumen_splash.png)
-
-## Why?
-
-Setting up an entire Lumen stack can be time consuming. This repo is a quick way to write apps in PHP using Lumen from an any Docker client. It uses docker-compose to setup the application services, databases, cache, etc...
+# DESAFIO TRANSACTION
 
 ## Clone this repo
 
 ```bash
-git clone https://github.com/saada/docker-lumen.git
-cd docker-lumen
+git clone https://github.com/roxreis/transaction.git
+cd transaction
 ```
 
 ## Create Lumen App
@@ -68,8 +62,11 @@ docker-compose exec php sh
 cd ..
 php artisan migrate
 php artisan cache:clear
+php artisan db:seed UsersSeeder
+php artisan db:seed ShopkeepersSeeder
 ```
+### Wallets Table
 
-## Contribute
+Manually populate the Wallets table with uuid user and shopkeeper
 
-Submit a Pull Request!
+

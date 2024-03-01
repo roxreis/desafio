@@ -1,4 +1,4 @@
-FROM php:8.1.9-fpm-alpine3.16
+FROM php:8.2.12-fpm-alpine3.18
 # lumen packages
 RUN docker-php-ext-install mysqli pdo_mysql
 # memcached
@@ -12,3 +12,6 @@ RUN set -xe \
     && rm -rf /usr/share/php7 \
     && rm -rf /tmp/* \
     && apk del .memcached-deps .phpize-deps
+
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+
